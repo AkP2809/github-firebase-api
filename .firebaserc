@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angular-github-api-96263": {
+      "hosting": {
+        "github-firebase-api": [
+          "angular-github-api-96263"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular-github-api-96263"
+  }
+}

@@ -1,0 +1,23 @@
+<div class="container">
+    <form class="form-inline mt-4 d-flex justify-content-center" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="userName">User Name:</label>
+            <input type="text" name="userName" id="userName" 
+            class = "form-control mx-sm-3"
+            [(ngModel)] = "userName" />
+        </div>
+        <button type="submit" class="btn btn-primary mb-2">Find User</button>
+    </form>
+    
+    <!-- TO RENDER ERROR -->
+    <div class="alert alert-danger m-5" role="alert"></div>
+
+    <div class="row mt-3">
+        <div class="col col-md-4">
+            <app-user-card *ngIf="value" [userName]="userName"></app-user-card>
+        </div>
+        <div class="col col-md-8">
+            <app-repos *ngIf="value" [userName]="userName"></app-repos>
+        </div>
+    </div>
+</div>
